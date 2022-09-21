@@ -19,7 +19,7 @@
   color: white;
   background: linear-gradient(to right, white, aqua),
     linear-gradient(to right, aqua, white);
-  background-size: 100% 1.3px, 0 3.3px;
+  background-size: 100% 3px, 0 3.3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
