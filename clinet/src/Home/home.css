@@ -1,0 +1,22 @@
+.departmentsContainer{
+    width: 20vw;
+    height: 30vh;
+    background-color: green;
+   margin: 5vw;
+    margin-top: 10vw !important;
+}
+
+.Homepage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.accordion-header{
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+}
+.accordion-container{
+    width: 50%;
+}

@@ -15,6 +15,11 @@ router.post("/cardiology", (req, res, next) => {
         .catch(next)
     : res.json({ error: "invalid input" });
 });
+router.delete("/cardiology/:id", (req, res, next) => {
+  Cardiology.findOneAndDelete({ _id: req.params.id })
+    .then((data) => res.json(data))
+    .catch(next);
+});
 
 router.patch("/cardiology/?:id", (req, res, next) => {
   Oncology.put({ _id: req.params.id })
