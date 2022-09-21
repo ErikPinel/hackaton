@@ -1,11 +1,14 @@
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import Diagram from "../Diagram/diagram";
+import "./cardiology.css"
 
 const Cardilogy = () => {
   const [amount, setAmount] = useState(0);
   const [prevAmount, setPrevAmount] = useState(0);
   const [array, setArray] = useState([]);
+  let arr=[1,2,6,2];
   const getCurrentAmount = () => {
     axios.get("/api-cardiology/cardiology").then((res) => {
       if (res.data) {
@@ -60,6 +63,9 @@ const Cardilogy = () => {
       <button onClick={getPrevAmount}>getPrevAmount</button>
       <p>{amount}</p>
       <p><strong>{prevAmount}</strong></p>
+      <div className='diagram-display-container'>
+   { arr.map((e,index)=>(<span className='diagram-span-container' ><Diagram heigt={10} amount={arr[index]*10}></Diagram></span>) )}
+   </div>
     </div>
   );
 };
