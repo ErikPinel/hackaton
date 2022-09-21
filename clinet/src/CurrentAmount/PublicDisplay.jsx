@@ -29,7 +29,6 @@ function PublicDisplay() {
         let mahlakaObj={};
         let mahlakaArr=[];
         tempData.map((element, index) => {
-          element.mahlaka.map((e,i)=> {   })
           tempobj = {
             mahlaka : element.mahlaka,
             time: element.time,

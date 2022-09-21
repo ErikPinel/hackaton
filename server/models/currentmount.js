@@ -3,77 +3,72 @@ const mongoose=require('mongoose');
 
 const CurrentAmoutSchema=mongoose.Schema({
     current9:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current10:{
-        type:Number,
-        required:true,
-        default: 0
-
+        
+        mahlaka: Array,
+        time : Date
     },
     current11:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
 
     },
     current12:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current13:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current14:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current15:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current16:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current17:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current18:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current19:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current20:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     },
     current21:{
-        type:Number,
-        required:true,
-        default: 0
-    },
-    current21:{
-        type:Number,
-        required:true,
-        default: 0
+        
+        mahlaka: Array,
+        time : Date
     }
+  
 });
 
 

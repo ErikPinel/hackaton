@@ -1,35 +1,34 @@
 const express=require('express');
 const CurrentAmount = require('../models/currentmount');
-const Todo = require('../models/todo');
 const Users = require('../models/users');
 const router= express.Router();
 
 
 
 
-router.get('/todos',(req,res,next)=>{
-Todo.find({},'action')
-.then((data)=> res.json(data))
-.catch(next)
+// router.get('/todos',(req,res,next)=>{
+// Todo.find({},'action')
+// .then((data)=> res.json(data))
+// .catch(next)
 
 
-})
+// })
 
-router.post('/todos',(req,res,next)=>{
-    req.body.action?
-    Todo.create(req.body)
-    .then((data)=>res.json(data))
-    .catch(next) 
-    : res.json({error: "invalid input"}) 
+// router.post('/todos',(req,res,next)=>{
+//     req.body.action?
+//     Todo.create(req.body)
+//     .then((data)=>res.json(data))
+//     .catch(next) 
+//     : res.json({error: "invalid input"}) 
     
-})
+// })
 
 
-router.delete('/todos/?:id',(req,res,next)=>{
-    Todo.findOneAndDelete({_id:req.params.id})
-    .then((data)=>res.json(data))
-    .catch(next);
-})
+// router.delete('/todos/?:id',(req,res,next)=>{
+//     Todo.findOneAndDelete({_id:req.params.id})
+//     .then((data)=>res.json(data))
+//     .catch(next);
+// })
 
 
 //users
@@ -87,6 +86,11 @@ router.get('/currentamount',(req,res,next)=>{
         .catch(next);
     })
     
+    router.patch('/currentamount/?:id',(req,res,next)=>{
+        CurrentAmount.put({_id:req.params.id})
+        .then((data)=>res.json(data))
+        .catch(next);
+    })
 
 
 module.exports= router;
