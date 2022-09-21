@@ -6,6 +6,9 @@ import LOGIN from './LogRegComponent/Logins';
 import Navbar from './NavBar/Navbar';
 import Oncology from './Departments/Oncology';
 import LoginModal from './Login/LoginModal';
+import Diagram from './diagram/diagram';
+
+
 
 //
 function App() {
@@ -14,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-    <LOGIN></LOGIN>
+  
+    
     <Routes>
       {/* <Route path="/home" element={<Home/>}/> */}
       <Route path="/haematology" element={<Haematology/>}/>
@@ -22,6 +26,7 @@ function App() {
       <Route path="/cardiology" element={<Cardilogy/>}/>
       <Route path="/login" element={<LoginModal/>}/>
     </Routes>
+   
     </div>
   );
 }
