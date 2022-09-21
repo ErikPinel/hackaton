@@ -6,6 +6,7 @@ import LOGIN from './LogRegComponent/Logins';
 import Navbar from './NavBar/Navbar';
 import Oncology from './Departments/Oncology';
 import LoginModal from './Login/LoginModal';
+import HomePage from './Home/home';
 
 //
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <Navbar></Navbar>
     <LOGIN></LOGIN>
     <Routes>
-      {/* <Route path="/home" element={<Home/>}/> */}
+      <Route path="/home" element={<HomePage/>}/>
       <Route path="/haematology" element={<Haematology/>}/>
       <Route path="/oncology" element={<Oncology/>}/>
       <Route path="/cardiology" element={<Cardilogy/>}/>
