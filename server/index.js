@@ -1,9 +1,9 @@
 const express =require('express');
-const mongoose  = require('mongoose');
+const mongoose = require('mongoose');
 const app=express();
 const port =5000;
-const haematologyRoutes=require('./routes/api-haematology')
-const oncologyRoutes=require('./routes/api-oncology')
+const haematologyRoutes=require('./routes/api-haemotology')
+const oncologyRoutes=require('./routes/api-oncology ')
 const cardiologyRoutes=require('./routes/api-cardiology')
 const usersRoutes=require('./routes/api-users')
 require('dotenv').config();
