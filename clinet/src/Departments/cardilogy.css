@@ -1,0 +1,8 @@
+.diagram-display-container{
+  display: flex;
+  background-color: grey;
+
+}
+.diagram-span-container{
+  margin: 2vw;
+}
