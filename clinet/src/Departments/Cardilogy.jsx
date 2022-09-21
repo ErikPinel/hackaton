@@ -4,8 +4,9 @@ import { useEffect } from "react";
 import Diagram from "../Diagram/diagram";
 import "./cardiology.css"
 
+
 const Cardilogy = () => {
-    const [currentDate,setCurrentDate]=useState(new Date())
+    const [data,setdata]=useState([])
     const [prevDate,setPrevDate]=useState(new Date())
     const as= new Date();
     console.log(prevDate.getHours())
@@ -35,12 +36,18 @@ const Cardilogy = () => {
     }
   };
 
+  const deleteFromPrev = () => {
+    axios.delete(`/api-current/current/${data[0]}`);
+  }
+
+
   const deleteFromAmount = () => {
       axios.delete(`/api-cardiology/cardiology/${array[0]}`);
     }
     const getPrevAmount = () => {
         axios.get('api-counter/counter')
             .then((res) => {
+                setdata(res.data);
                 setPrevAmount(res.data[res.data.length-1].currentCardiology.total)
 
                 console.log(prevAmount);
@@ -58,6 +65,7 @@ const Cardilogy = () => {
 
 
   setInterval(getCurrentAmount,500000);
+  setInterval(deleteFromPrev,50);
 
   useEffect(() => {
     let a=new Date;
@@ -75,7 +83,7 @@ const Cardilogy = () => {
       <p>{amount}</p>
       <p><strong>{prevAmount}</strong></p>
       <div className='diagram-display-container'>
-   { arr.map((e,index)=>(<span className='diagram-span-container' ><Diagram heigt={10} amount={arr[index]*10}></Diagram></span>) )}
+   {data.map((e,index)=>(<span className='diagram-span-container' ><Diagram heigt={data[index].currentCardiology.total?data[index].currentCardiology.total:2 } amount={arr[index]*10}></Diagram></span>) )}
    </div>
     </div>
   );

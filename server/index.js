@@ -7,6 +7,8 @@ const oncologyRoutes=require('./routes/api-oncology')
 const cardiologyRoutes=require('./routes/api-cardiology')
 const usersRoutes=require('./routes/api-users')
 const counterRoutes=require('./routes/api-counter')
+const counterHeamatologyRouts= require('./routes/api-counterHeamatolegy')
+const counterOncologyRouts=require('./routes/api-counterOncology')
 require('dotenv').config();
 const bodyParser=require('body-parser')
 mongoose.Promise=global.Promise;
@@ -26,6 +28,8 @@ app.use((req, res, next) => {
   app.use(bodyParser.json());
   
 
+  app.use('/api-counteroncology',counterOncologyRouts)
+ app.use('/api-counterheamatology',counterHeamatologyRouts)
 app.use('/api-oncology',oncologyRoutes)
 app.use('/api-cardiology',cardiologyRoutes)
 app.use('/api-haematology',haematologyRoutes)
