@@ -5,6 +5,10 @@ import Diagram from "../Diagram/diagram";
 import "./cardiology.css"
 
 const Cardilogy = () => {
+    const [currentDate,setCurrentDate]=useState(new Date())
+    const [prevDate,setPrevDate]=useState(new Date())
+    const as= new Date();
+    console.log(prevDate.getHours())
   const [amount, setAmount] = useState(0);
   const [prevAmount, setPrevAmount] = useState(0);
   const [array, setArray] = useState([]);
@@ -37,21 +41,27 @@ const Cardilogy = () => {
     const getPrevAmount = () => {
         axios.get('api-counter/counter')
             .then((res) => {
-                setPrevAmount(res.data.length)
+                setPrevAmount(res.data[res.data.length-1].currentCardiology.total)
+
                 console.log(prevAmount);
             })
     }
 
     const postPrevAmount = () => {
-    axios.post('/api-cardiology/cardiology', amount)
+       
+  const hours=new Date().getHours()
+        let obj= {currentCardiology:{total:amount,time:hours}}
+        console.log(obj)
+    axios.post('/api-counter/counter',obj)
         .then((res) => setPrevAmount(amount))
     }
 
 
-  setInterval(getCurrentAmount, 500000);
-  setInterval(deleteCurrentAmount, 500000);
-  setInterval(deleteCurrentAmount, 500000);
+  setInterval(getCurrentAmount,500000);
+
   useEffect(() => {
+    let a=new Date;
+    console.log(a.getHours())
     getCurrentAmount();
   }, []);
 
@@ -61,6 +71,7 @@ const Cardilogy = () => {
       <button onClick={postAmount}>post</button>
       <button onClick={deleteFromAmount}>delete</button>
       <button onClick={getPrevAmount}>getPrevAmount</button>
+      <button onClick={postPrevAmount}>postprev</button>
       <p>{amount}</p>
       <p><strong>{prevAmount}</strong></p>
       <div className='diagram-display-container'>
