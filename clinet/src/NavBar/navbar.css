@@ -1,10 +1,13 @@
 .navbar-container {
   width: 100vw;
   height: 7vh;
-  background-color: aqua;
-  box-shadow: 0px 1.5px 3px gray;
+  background-color: burlywood;
+  box-shadow: 0px 1.5px 3px white ;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0%;
+  z-index: 4;
 }
 .nav-btns-container {
   width: 40vw;
@@ -17,8 +20,8 @@
   font-size: 1.2rem;
   text-decoration: none;
   color: white;
-  background: linear-gradient(to right, white, aqua),
-    linear-gradient(to right, aqua, white);
+  background: linear-gradient(to right, white, burlywood),
+    linear-gradient(to right, burlywood, white);
   background-size: 100% 3px, 0 3.3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
