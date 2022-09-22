@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import {Link} from "react-router-dom";
 import "./searchbar.css";
-const data = require("./pages-data.js");
+const data = require("./pages-data.json");
 
 const SearchBar = () => {
   const [value, setValue] = useState("");
@@ -30,7 +30,7 @@ setTimeout(()=>{ref.current?.classList.add('hidden')
           onFocus={inputFocusHandler}
           onBlur={inputBlurHandler}
           onChange={onChangeInput}
-          placeholder="Find Your Artist..."
+          placeholder="Search..."
         ></input>
         <div className="dropdown" ref={ref}>
           {data

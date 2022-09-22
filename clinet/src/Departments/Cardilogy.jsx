@@ -105,7 +105,7 @@ const Cardilogy = () => {
       <p>{amount}</p>
       <p><strong>{prevAmount}</strong></p>
       <div className='diagram-display-container'>
-   {newarr.map((e,index)=>(<span className='diagram-span-container' ><Diagram heigt={2 } amount={newarr[index]}></Diagram>{newarr[index]}</span>) )}
+   {newarr.map((e,index)=>(<span className='diagram-span-container' ><Diagram heigt={2} amount={newarr[index]}></Diagram>{newarr[index]}</span>) )}
    </div>
     </div>
   );

@@ -9,8 +9,8 @@ const Navbar = () => {
         <NavLink className="nav-btn" to="/haematology"><strong>Haematology</strong></NavLink>
         <NavLink className="nav-btn" to="/oncology"><strong>Oncology</strong></NavLink>
         <NavLink className="nav-btn" to="/cardiology"><strong>Cardiology</strong></NavLink>
-        <NavLink className="nav-btn" to="/login"><strong>Login</strong></NavLink>
-        <NavLink className="nav-btn" to="/register"><strong>Register</strong></NavLink>
+        <NavLink className="nav-btn" to="/staff"><strong>Staff Section</strong></NavLink>
+        
       </div>
     </div>
   );

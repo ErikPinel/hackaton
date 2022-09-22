@@ -5,8 +5,7 @@ import Haematology from './Departments/Haematology';
 import Navbar from './NavBar/Navbar';
 import Oncology from './Departments/Oncology';
 import HomePage from './Home/home';
-import Login from './Login/Login';
-import Register from './Register/Register';
+import Staff from './NavBar/Staff';
 
 //
 function App() {
@@ -20,8 +19,7 @@ function App() {
       <Route path="/haematology" element={<Haematology/>}/>
       <Route path="/oncology" element={<Oncology/>}/>
       <Route path="/cardiology" element={<Cardilogy/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
+      <Route path="/staff" element={<Staff/>}/>
     </Routes>
     </div>
   );

@@ -51,7 +51,6 @@ function HomePage() {
         >
           <div className="first-container">
             <SearchBar></SearchBar>
-            <h1 className="first-header">first hospital department</h1>
           </div>
         </motion.div>
       </div>

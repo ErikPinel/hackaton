@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logged } from "../Redux/loginReducer";
 import { useEffect } from "react";
+import "./login.css"
 
 const Login = () => {
   const dispatch = useDispatch();
