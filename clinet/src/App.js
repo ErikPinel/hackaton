@@ -2,11 +2,11 @@ import { Route, Routes } from 'react-router';
 import './App.css';
 import Cardilogy from './Departments/Cardilogy';
 import Haematology from './Departments/Haematology';
-import LOGIN from './LogRegComponent/Logins';
 import Navbar from './NavBar/Navbar';
 import Oncology from './Departments/Oncology';
-import LoginModal from './Login/LoginModal';
 import HomePage from './Home/home';
+import Login from './Login/Login';
+import Register from './Register/Register';
 
 //
 function App() {
@@ -15,13 +15,13 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-    <LOGIN></LOGIN>
     <Routes>
       <Route path="/home" element={<HomePage/>}/>
       <Route path="/haematology" element={<Haematology/>}/>
       <Route path="/oncology" element={<Oncology/>}/>
       <Route path="/cardiology" element={<Cardilogy/>}/>
-      <Route path="/login" element={<LoginModal/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
     </Routes>
     </div>
   );

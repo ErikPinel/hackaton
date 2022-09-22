@@ -19,7 +19,6 @@ const Cardilogy = () => {
         setAmount(res.data.length);
         console.log(res.data.length);/////////
         setArray(res.data.map((e) => e._id));
-        console.log(array);////////////
       } else {
         console.log("error"); //////////////////////////////////////////////////
       }
