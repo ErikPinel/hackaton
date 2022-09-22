@@ -54,11 +54,11 @@ const Login = () => {
   return (
     <div className="login-container">
       {!isOpen?<input
-        placeholder="enterusername..."
+        placeholder="enter username..."
         onChange={(e) => setUserNameValue(e.target.value)}
       ></input>:null}
       {!isOpen?<input
-        placeholder="enterpasswword..."
+        placeholder="enter passwword..." type="password"
         onChange={(e) => setPasswordValue(e.target.value)}
       ></input>:null}
       {!isOpen? <button className="logs-btns" onClick={getUsers}>Log In</button> : null}

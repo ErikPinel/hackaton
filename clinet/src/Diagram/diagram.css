@@ -4,6 +4,12 @@
     background-color: green;
     position: absolute;
    bottom: 20vh;
-   
+   background-color: rgb(55, 92, 55);
+height: 75px;
+width: 34px;
+border-radius: 10px;
+padding-top: 1rem;
+border: 1px solid rgb(55, 92, 55);
+color: white;
    
 }
