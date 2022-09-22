@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import Diagram from "../Diagram/diagram";
-import "../Departments/cardiology.css";
+import "./staff-cardio.css";
 
 const StaffCardilogy = () => {
   const [data, setdata] = useState([]);
@@ -13,7 +13,6 @@ const StaffCardilogy = () => {
   const [prevAmount, setPrevAmount] = useState(0);
   const [array, setArray] = useState([]);
   const [newarr, setnewArr] = useState([]);
-  const [id, setId] = useState([]);
   const arrHours = ["9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"]
   let arr = [1, 2, 6, 2];
   const getCurrentAmount = () => {
@@ -93,23 +92,19 @@ const StaffCardilogy = () => {
   }, []);
 
   return (
-    <div className="cardilogy-container">
-      <button onClick={getCurrentAmount}>get</button>
-      <button onClick={postAmount}>post</button>
-      <button onClick={deleteFromAmount}>delete</button>
-      <button onClick={getPrevAmount}>getPrevAmount</button>
-      <button onClick={postPrevAmount}>postprev</button>
-      <button onClick={deleteFromPrev}> del prev</button>
-      <p>{amount}</p>
-      <p>
-        <strong>{prevAmount}</strong>
-      </p>
+    <div className="cardilogy-container1">
+      <button className="staff-btn" onClick={getCurrentAmount}>get</button>
+      <button className="staff-btn"  onClick={postAmount}>post</button>
+      <button className="staff-btn"  onClick={deleteFromAmount}>delete</button>
+      <button className="staff-btn"  onClick={getPrevAmount}>getPrevAmount</button>
+      <button className="staff-btn"  onClick={postPrevAmount}>postprev</button>
+      <button className="staff-btn"  onClick={deleteFromPrev}> del prev</button>
       <div className="diagram-display-container">
         {newarr.map((e, index) => (
-          <span className="diagram-span-container">
+          <p className="diagram-span-container">
             <Diagram heigt={2} amount={newarr[index]}></Diagram>
             {arrHours[index]}
-          </span>
+          </p>
         ))}
       </div>
     </div>

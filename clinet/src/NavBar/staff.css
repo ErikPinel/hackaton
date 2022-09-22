@@ -3,18 +3,18 @@
     background-color: rgb(225, 211, 191);
     height: 100vh;
     width: 100vw;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
-.inner-container{
+/* .inner-container{
     height: 80vh;
     width: 70vw;
     background-color: white;
     border-radius: 15%;
     box-shadow: 0 5px  9px 5px white;
-}
+} */
 .not-allowed{
     height: 80vh;
     width: 70vw;
@@ -22,3 +22,19 @@
     border-radius: 15%;
     box-shadow: 3px 3px 3px 3px white;
 }
+
+.staff-btn{
+    background-color: burlywood;
+    padding: 1rem;
+    border: none;
+    transition-duration: 0.4s;
+    border-radius: 13%;
+    cursor: pointer;
+}
+.staff-btn:hover{
+    background-color: burlywood;
+    padding: 1.2rem;
+}
+/* .cardiology-container1{
+    width: 50vw;
+} */

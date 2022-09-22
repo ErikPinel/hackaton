@@ -61,9 +61,9 @@ const Login = () => {
         placeholder="enterpasswword..."
         onChange={(e) => setPasswordValue(e.target.value)}
       ></input>:null}
-      {!isOpen? <button onClick={getUsers}>Log In</button> : null}
+      {!isOpen? <button className="logs-btns" onClick={getUsers}>Log In</button> : null}
       {isOpen ? 
-      <button onClick={logOut}>Log Out</button> :
+      <button className="logs-btns" onClick={logOut}>Log Out</button> :
        <h1>Not Logged</h1>}
     </div>
   );

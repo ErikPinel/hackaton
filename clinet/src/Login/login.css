@@ -1,4 +1,30 @@
-.login-container{
-    display: flex;
-    flex-direction: column;
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+.logs-btns {
+  background-color: burlywood;
+  padding: 1rem;
+  border: none;
+  transition-duration: 0.4s;
+  border-radius: 13%;
+  cursor: pointer;
+  width: 4rem;
+}
+.logs-btns:hover {
+  background-color: burlywood;
+  padding: 1.2rem;
+}
+input{
+    width: 10rem;
+  background-color: burlywood;
+  border-color: white;
+
+}
+input:active,
+input:visited, 
+input:hover,
+input:focus {
+  border-color: white;
+
 }

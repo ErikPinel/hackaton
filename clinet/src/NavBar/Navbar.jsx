@@ -6,9 +6,9 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="nav-btns-container">
         <NavLink className="nav-btn" to="/home"><strong>Home</strong></NavLink>
-        <NavLink className="nav-btn" to="/haematology"><strong>Haematology</strong></NavLink>
-        <NavLink className="nav-btn" to="/oncology"><strong>Oncology</strong></NavLink>
-        <NavLink className="nav-btn" to="/cardiology"><strong>Cardiology</strong></NavLink>
+        {/* <NavLink className="nav-btn" to="/haematology"><strong>Haematology</strong></NavLink> */}
+        {/* <NavLink className="nav-btn" to="/oncology"><strong>Oncology</strong></NavLink> */}
+        <NavLink className="nav-btn" to="/cardiology"><strong>Capcity</strong></NavLink>
         <NavLink className="nav-btn" to="/staff"><strong>Staff Section</strong></NavLink>
         
       </div>

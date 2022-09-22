@@ -16,8 +16,8 @@ function App() {
       <Navbar></Navbar>
     <Routes>
       <Route path="/home" element={<HomePage/>}/>
-      <Route path="/haematology" element={<Haematology/>}/>
-      <Route path="/oncology" element={<Oncology/>}/>
+      {/* <Route path="/haematology" element={<Haematology/>}/> */}
+      {/* <Route path="/oncology" element={<Oncology/>}/> */}
       <Route path="/cardiology" element={<Cardilogy/>}/>
       <Route path="/staff" element={<Staff/>}/>
     </Routes>
