@@ -86,12 +86,12 @@ const Cardilogy = () => {
  
 
 
-
   useEffect(() => {
-    let a=new Date;
-    console.log(a.getHours())
-    getCurrentAmount();
-    getPrevAmount()
+    let a=new Date();
+    if(a.getMinutes() === 59) {
+      getPrevAmount()
+    }
+    getCurrentAmount()
   }, []);
 
   return (
