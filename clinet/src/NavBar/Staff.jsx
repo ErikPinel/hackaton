@@ -3,6 +3,7 @@ import { selectLog } from "../Redux/loginReducer";
 import { useSelector } from "react-redux";
 import Cardilogy from "../Departments/Cardilogy";
 import "./staff.css";
+import StaffCardilogy from "./StaffCardilogy";
 
 const Staff = () => {
   const isOpen = useSelector(selectLog);
@@ -14,7 +15,7 @@ const Staff = () => {
       </div>
       {isOpen ? (
         <div className="inner-container">
-          <Cardilogy></Cardilogy>
+          <StaffCardilogy></StaffCardilogy>
         </div>
       ) : <div className="not-allowed">Not Allowed!</div>}
     </div>

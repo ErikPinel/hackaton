@@ -2,9 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import Diagram from "../Diagram/diagram";
-import "./cardiology.css";
+import "../Departments/cardiology.css";
 
-const Cardilogy = () => {
+const StaffCardilogy = () => {
   const [data, setdata] = useState([]);
   const [prevDate, setPrevDate] = useState(new Date());
   const as = new Date();
@@ -94,6 +94,16 @@ const Cardilogy = () => {
 
   return (
     <div className="cardilogy-container">
+      <button onClick={getCurrentAmount}>get</button>
+      <button onClick={postAmount}>post</button>
+      <button onClick={deleteFromAmount}>delete</button>
+      <button onClick={getPrevAmount}>getPrevAmount</button>
+      <button onClick={postPrevAmount}>postprev</button>
+      <button onClick={deleteFromPrev}> del prev</button>
+      <p>{amount}</p>
+      <p>
+        <strong>{prevAmount}</strong>
+      </p>
       <div className="diagram-display-container">
         {newarr.map((e, index) => (
           <span className="diagram-span-container">
@@ -106,4 +116,4 @@ const Cardilogy = () => {
   );
 };
 
-export default Cardilogy;
+export default StaffCardilogy;
